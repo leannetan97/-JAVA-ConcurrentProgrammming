@@ -9,36 +9,39 @@ Lab 5 - Volatile and Atomic<br>
 Lab 6 - Lambda expression Exercise<br>
 Lab 7 - Parallel Programming using fork join framework<br>
 <br>
-Extra Exercise on Fork and Join Framework<br>
+<b>Extra Exercise on Fork and Join Framework</b>
 1. Change Char to Numberic Value in String<br>
 2. Fibonanci<br>
+<br>
 
+## Volatile variable
+Write in main memory (not CPU cache) & Read from main memory (not CPU cache)
 <br>
-<h2> Volatile variable </h2>
-<p>	Write in main memory (not CPU cache) & Read from main memory (not CPU cache)</p>
+
+## Atomic
+Do or Don't & Complete at once or not at all
 <br>
-<h2> Atomic </h2>
-<p>	Do or Don't & Complete at once or not at all</p>
-<br>
-<h2>Visibility Guarantee</h2>
-<p>
+
+## Visibility Guarantee
   1. If Thread A writes to a volatile variable and Thread B subsequently reads the same volatile variable, then all variables visible to Thread A before writing the volatile variable, will also be visible to Thread B after it has read the volatile variable. <br>
-  2. If Thread A reads a volatile variable, then all all variables visible to Thread A when reading the volatile variable will also be re-read from main memory. </p>
+  2. If Thread A reads a volatile variable, then all all variables visible to Thread A when reading the volatile variable will also be re-read from main memory.
 <br>
-<h2>Happens Before Guarantee</h2>
-<p> Ensure Visibility by avoiding reorder <br>
-   <h4>1. Writing to a volatile variable:</h4><br>
-    a. Read/Write a variable BEFORE read a volatile<br>
-		-> Cannot reorder after write of a volatile<br>
-		-> must "Happen Before"<br>
-		b. Read/Write a variable AFTER write a volatile<br>
-		-> May reorder before write of a volatile<br>
-  <br>
-   <h4>2. Reading a volatile variable</h4><br>
-  	a. Read/Write a variable AFTER read a volatile<br>
-		-> Cannot reorder before read of a volatile<br>
-		b. Read/Write a variable BEFORE read a volatile<br>
-		-> May reorder after read of a volatile<br>
-    -> Read a Volatile must "Happen Before"<br>
-</p>
+
+## Happens Before Guarantee
+Ensure Visibility by avoiding reorder.
+1. Writing to a volatile variable:
+    * Read/Write a normal variable BEFORE writing to a volatile variable
+	> Cannot be reordered after writing to a volatile variable<br>
+ 	> Writing to a normal variable must "Happen Before"
+	* Read/Write a normal variable AFTER writing to a volatile variable	
+	> May be reordered before writing to a volatile variable
+
+2. Reading a volatile variable
+	* Read/Write a normal variable AFTER reading a volatile variable
+	> Cannot be reordered before reading of a volatile variable
+	* Read/Write a normal variable BEFORE reading a volatile	
+	> May be reordered after reading of a volatile variable<br>
+	> Read a volatile variable must "Happen Before"
+
+
 
