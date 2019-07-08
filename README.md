@@ -14,27 +14,27 @@ Extra Exercise on Fork and Join Framework<br>
 2. Fibonanci<br>
 
 <br>
-<h5> Volatile variable </h5>
+<h2> Volatile variable </h2>
 <p>	Write in main memory (not CPU cache) & Read from main memory (not CPU cache)</p>
 <br>
-<h5> Atomic </h5>
+<h2> Atomic </h2>
 <p>	Do or Don't & Complete at once or not at all</p>
 <br>
-<h5>Visibility Guarantee</h5>
+<h2>Visibility Guarantee</h2>
 <p>
   1. If Thread A writes to a volatile variable and Thread B subsequently reads the same volatile variable, then all variables visible to Thread A before writing the volatile variable, will also be visible to Thread B after it has read the volatile variable. <br>
   2. If Thread A reads a volatile variable, then all all variables visible to Thread A when reading the volatile variable will also be re-read from main memory. </p>
 <br>
-<h5>Happens Before Guarantee</h5>
+<h2>Happens Before Guarantee</h2>
 <p> Ensure Visibility by avoiding reorder <br>
-   1. Writing to a volatile variable:<br>
+   <h4>1. Writing to a volatile variable:</h4><br>
     a. Read/Write a variable BEFORE read a volatile<br>
 		-> Cannot reorder after write of a volatile<br>
 		-> must "Happen Before"<br>
 		b. Read/Write a variable AFTER write a volatile<br>
 		-> May reorder before write of a volatile<br>
   <br>
-   2. Reading a volatile variable<br>
+   <h4>2. Reading a volatile variable</h4><br>
   	a. Read/Write a variable AFTER read a volatile<br>
 		-> Cannot reorder before read of a volatile<br>
 		b. Read/Write a variable BEFORE read a volatile<br>
