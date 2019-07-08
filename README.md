@@ -1,4 +1,4 @@
-# ConcurrentProgrammming - Java
+# ConcurrentProgramming - Java
 This is my answer for WIF3003 Concurrent Programming Lab Exercises.
 <br><br>
 Lab 1 - Thread, Runnable, Synchronized Introduction<br>
